@@ -11,6 +11,7 @@ public class BatteryTest {
         int expected = 80;
         assertThat(expected, is(another.getLoad()));
     }
+
     @Test
     public void whenThis80Another20ThenThisLoadEqual0() {
         Battery charger = new Battery(80);
@@ -19,6 +20,7 @@ public class BatteryTest {
         int expected = 0;
         assertThat(expected, is(charger.getLoad()));
     }
+
     @Test
     public void whenThis95Another0ThenAnotherLoadEqual80() {
         Battery charger = new Battery(95);

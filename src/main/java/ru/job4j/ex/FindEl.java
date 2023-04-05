@@ -16,7 +16,7 @@ public class FindEl {
     }
 
     public static void main(String[] args) {
-        String[] animals = {"dog", "cat", "wolf"};
+        String[] animals = {"dog", "cat", "hamster"};
         try {
             System.out.println(indexOf(animals, "wolf"));
         } catch (ElementNotFoundException e) {

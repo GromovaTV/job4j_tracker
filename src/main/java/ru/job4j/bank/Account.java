@@ -1,10 +1,22 @@
 package ru.job4j.bank;
 import java.util.Objects;
 
+/**
+ * Модель данных представляющая банковский счет.
+ * Класс инкапсулирует поля requisite и balance и имеет открытые методы получения.
+ * и изменения этих полей.
+ * @author TATIANA GROMOVA
+ * @version 1.0
+ */
 public class Account {
     private String requisite;
     private double balance;
 
+    /**
+     * Конструктор, инициализирующий поля requisite и balance.
+     * @param requisite номер счета.
+     * @param balance сумма денег на счету.
+     */
     public Account(String requisite, double balance) {
         this.requisite = requisite;
         this.balance = balance;

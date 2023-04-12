@@ -1,10 +1,22 @@
 package ru.job4j.bank;
 import java.util.Objects;
 
+/**
+ * Модель данных представляющая клиента банка.
+ * Класс инкапсулирует поля passport и username и имеет открытые методы получения.
+ * и изменения этих полей.
+ * @author TATIANA GROMOVA
+ * @version 1.0
+ */
 public class User {
     private String passport;
     private String username;
 
+    /**
+     * Конструктор, инициализирующий поля passport и username
+     * @param passport номер паспотра
+     * @param username имя пользователя
+     */
     public User(String passport, String username) {
         this.passport = passport;
         this.username = username;

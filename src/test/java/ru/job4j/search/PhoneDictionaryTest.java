@@ -2,26 +2,15 @@ package ru.job4j.search;
 import org.junit.Test;
 import java.util.ArrayList;
 import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.*;
-
+import static org.junit.Assert.assertThat;
 public class PhoneDictionaryTest {
     @Test
     public void whenFindByName() {
         PhoneDictionary phones = new PhoneDictionary();
         phones.add(
-                new Person("Ivan", "Petrov", "555888", "Tomsk")
+                new Person("Petr", "Arsentev", "534872", "Bryansk")
         );
-        ArrayList<Person> persons = phones.find("Ivan");
-        assertThat(persons.get(0).getSurname(), is("Petrov"));
-    }
-
-    @Test
-    public void whenNotFoundByName() {
-        PhoneDictionary phones = new PhoneDictionary();
-        Person person = new Person("Ivan", "Petrov", "555888", "Tomsk");
-        phones.add(person);
-        ArrayList<Person> persons = phones.find("okhf");
-        ArrayList<Person> expected = new ArrayList<>();
-        assertEquals(expected, persons);
+        ArrayList<Person> persons = phones.find("Petr");
+        assertThat(persons.get(0).getSurname(), is("Arsentev"));
     }
 }

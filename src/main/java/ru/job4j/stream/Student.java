@@ -1,4 +1,5 @@
 package ru.job4j.stream;
+import java.util.Comparator;
 import java.util.Objects;
 
 public class Student {

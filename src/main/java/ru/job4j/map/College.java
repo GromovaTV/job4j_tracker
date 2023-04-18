@@ -1,5 +1,6 @@
 package ru.job4j.map;
 import java.util.Map;
+import java.util.Optional;
 import java.util.Set;
 
 public class College {
@@ -9,37 +10,24 @@ public class College {
         this.students = students;
     }
 
-    public Student findByAccount(String account) {
-        return students.keySet()
+    public Optional<Student> findByAccount(String account) {
+        Optional<Student> opt = Optional.empty();
+        opt = students.keySet()
                 .stream()
                 .filter(s -> s.getAccount().equals(account))
-                .findFirst()
-                .orElse(null);
+                .findFirst();
+        return opt;
     }
 
-    public Subject findBySubjectName(String account, String name) {
-        Student a = findByAccount(account);
-        if (a != null) {
-            return students.get(a)
+    public Optional<Subject> findBySubjectName(String account, String name) {
+        Optional<Subject> res = Optional.empty();
+        Optional<Student> a = findByAccount(account);
+        if (a.isPresent()) {
+            res = a.flatMap(student -> students.get(student)
                     .stream()
                     .filter(s -> s.getName().equals(name))
-                    .findFirst()
-                    .orElse(null);
+                    .findFirst());
         }
-        return null;
-    }
-
-    public static void main(String[] args) {
-        Map<Student, Set<Subject>> students = Map.of(new Student("Student", "000001", "201-18-15"),
-                Set.of(
-                        new Subject("Math", 70),
-                        new Subject("English", 85)
-                )
-        );
-        College college = new College(students);
-        Student student = college.findByAccount("000001");
-        System.out.println("Найденный студент: " + student);
-        Subject english = college.findBySubjectName("000001", "English");
-        System.out.println("Оценка по найденному предмету: " + english.getScore());
+        return res;
     }
 }

@@ -16,7 +16,7 @@ public class StartUITest {
         Input in = new StubInput(
                 new String[] {"0", "Item name", "1"}
         );
-        Tracker tracker = new Tracker();
+        MemTracker tracker = new MemTracker();
         ArrayList<UserAction> actions = new ArrayList<>();
         actions.add(new CreateAction(out));
         actions.add(new CloseAction(out));
@@ -27,7 +27,7 @@ public class StartUITest {
     @Test
     public void whenDeleteItem() {
         Output out = new StubOutput();
-        Tracker tracker = new Tracker();
+        MemTracker tracker = new MemTracker();
         /* Добавим в tracker новую заявку */
         Item item = tracker.add(new Item("Deleted item"));
         /* Входные данные должны содержать ID добавленной заявки item.getId() */
@@ -44,7 +44,7 @@ public class StartUITest {
     @Test
     public void whenReplaceItemTestOutputIsSuccessfully() {
         Output out = new StubOutput();
-        Tracker tracker = new Tracker();
+        MemTracker tracker = new MemTracker();
         Item one = tracker.add(new Item("test1"));
         String replaceName = "New Test Name";
         Input in = new StubInput(
@@ -72,7 +72,7 @@ public class StartUITest {
     public void whenFindAllTestOutputIsSuccessfully() {
         final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("dd-MMMM-EEEE-yyyy HH:mm:ss");
         Output out = new StubOutput();
-        Tracker tracker = new Tracker();
+        MemTracker tracker = new MemTracker();
         Item one = tracker.add(new Item("test1"));
         Item two = tracker.add(new Item("test2"));
         Input in = new StubInput(
@@ -101,7 +101,7 @@ public class StartUITest {
     public void whenFindByIdTestOutputIsSuccessfully() {
         final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("dd-MMMM-EEEE-yyyy HH:mm:ss");
         Output out = new StubOutput();
-        Tracker tracker = new Tracker();
+        MemTracker tracker = new MemTracker();
         Item one = tracker.add(new Item("test1"));
         Item two = tracker.add(new Item("test2"));
         Input in = new StubInput(
@@ -129,7 +129,7 @@ public class StartUITest {
     public void whenFindByNameTestOutputIsSuccessfully() {
         final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("dd-MMMM-EEEE-yyyy HH:mm:ss");
         Output out = new StubOutput();
-        Tracker tracker = new Tracker();
+        MemTracker tracker = new MemTracker();
         Item one = tracker.add(new Item("test1"));
         Item two = tracker.add(new Item("test2"));
         Input in = new StubInput(
@@ -159,7 +159,7 @@ public class StartUITest {
         Input in = new StubInput(
                 new String[] {"1", "0"/* Пункты меню: неверный, верный. */}
         );
-        Tracker tracker = new Tracker();
+        MemTracker tracker = new MemTracker();
         ArrayList<UserAction> actions = new ArrayList<>();
         actions.add(new CloseAction(out));
 

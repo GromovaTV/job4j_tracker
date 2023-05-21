@@ -5,10 +5,9 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
-public class Tracker {
-    private final List<Item> items = new ArrayList<Item>();
+public class MemTracker implements Store {
+    private List<Item> items;
     private int ids = 1;
-    private int size = 0;
 
     public Item add(Item item) {
         item.setId(ids++);

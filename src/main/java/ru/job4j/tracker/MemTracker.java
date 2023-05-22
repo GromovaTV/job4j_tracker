@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Objects;
 
 public class MemTracker implements Store {
-    private List<Item> items;
+    private List<Item> items = new ArrayList<>();
     private int ids = 1;
 
     public Item add(Item item) {
@@ -64,7 +64,6 @@ public class MemTracker implements Store {
     }
 
     public List<Item> findAll() {
-        int i = 0;
         List<Item> rsl = new ArrayList<>();
         for (int index = 0; index < items.size(); index++) {
             if (items.get(index) == null) {

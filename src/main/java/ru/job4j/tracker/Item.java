@@ -5,7 +5,6 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Objects;
 import javax.persistence.*;
-import java.util.Objects;
 
 @Entity
 @Table(name = "items")

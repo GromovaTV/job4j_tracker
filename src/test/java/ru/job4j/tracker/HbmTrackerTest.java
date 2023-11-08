@@ -1,9 +1,9 @@
 package ru.job4j.tracker;
 
 import org.junit.Test;
-
+import java.util.ArrayList;
 import java.util.List;
-
+import static net.bytebuddy.matcher.ElementMatchers.is;
 import static org.junit.Assert.*;
 
 public class HbmTrackerTest {
@@ -33,8 +33,11 @@ public class HbmTrackerTest {
         hbt.init();
         Item item = new Item(1, "name");
         hbt.add(item);
-        List<Item> res = hbt.findAll();
-        assertEquals(item, res.get(0));
+        Item item2 = new Item(2, "name2");
+        hbt.add(item2);
+        List<Item> items = new ArrayList<>();
+        hbt.findAll(items::add);
+        assertEquals(items, List.of(item, item2));
     }
 
     @Test
@@ -57,7 +60,8 @@ public class HbmTrackerTest {
         hbt.add(item);
         hbt.add(item2);
         hbt.delete(1);
-        List<Item> res = hbt.findAll();
-        assertEquals(item2, res.get(0));
+        List<Item> items = new ArrayList<>();
+        hbt.findAll(items::add);
+        assertEquals(item2, items.get(0));
     }
 }

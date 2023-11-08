@@ -37,7 +37,7 @@ public final class SingleTracker {
         return tracker.findByName(key);
     }
 
-    public List<Item> findAll() {
-        return tracker.findAll();
+    public void findAll(Observe<Item> observe) {
+        tracker.findAll(observe);
     }
 }

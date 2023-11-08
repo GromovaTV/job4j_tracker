@@ -3,6 +3,7 @@ import org.junit.Test;
 
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.List;
 
 import org.hamcrest.Matchers;
 
@@ -21,7 +22,9 @@ public class StartUITest {
         actions.add(new CreateAction(out));
         actions.add(new CloseAction(out));
         new StartUI(out).init(in, tracker, actions);
-        assertThat(tracker.findAll().get(0).getName(), is("Item name"));
+        List<Item> items = new ArrayList<>();
+        tracker.findAll(items::add);
+        assertThat(items.get(0).getName(), is("Item name"));
     }
 
     @Test

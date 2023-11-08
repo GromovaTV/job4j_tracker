@@ -9,7 +9,9 @@ public interface Store {
 
     boolean delete(int id);
 
-    List<Item> findAll();
+//    List<Item> findAll();
+
+    void findAll(Observe<Item> observe);
 
     List<Item> findByName(String key);
 

@@ -4,12 +4,12 @@ import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import ru.job4j.tracker.Item;
 import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 import static org.hamcrest.Matchers.is;
@@ -79,7 +79,9 @@ public class SqlTrackerTest {
         Item item2 = new Item("item2");
         tracker.add(item);
         tracker.add(item2);
-        assertThat(tracker.findAll(), is(List.of(item, item2)));
+        List<Item> items = new ArrayList<>();
+        tracker.findAll(items::add);
+        assertThat(items, is(List.of(item, item2)));
     }
 
     @Test

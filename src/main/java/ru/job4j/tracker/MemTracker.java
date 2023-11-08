@@ -63,14 +63,12 @@ public class MemTracker implements Store {
         return rsl;
     }
 
-    public List<Item> findAll() {
-        List<Item> rsl = new ArrayList<>();
+    public void findAll(Observe<Item> observe) {
         for (int index = 0; index < items.size(); index++) {
             if (items.get(index) == null) {
                 continue;
             }
-            rsl.add(items.get(index));
+            observe.receive(items.get(index));
         }
-        return rsl;
     }
 }

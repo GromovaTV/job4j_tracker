@@ -1,13 +1,16 @@
 package ru.job4j.tracker;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.Objects;
 
 public class MemTracker implements Store {
     private List<Item> items = new ArrayList<>();
     private int ids = 1;
+
+    @Override
+    public void init() {
+        items = new ArrayList<>();
+    }
 
     public Item add(Item item) {
         item.setId(ids++);
@@ -70,5 +73,10 @@ public class MemTracker implements Store {
             }
             observe.receive(items.get(index));
         }
+    }
+
+    @Override
+    public void close() throws Exception {
+        throw new UnsupportedOperationException();
     }
 }

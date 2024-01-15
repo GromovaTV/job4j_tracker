@@ -1,8 +1,12 @@
 package ru.job4j.oop;
+
 import org.junit.Test;
+
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
+
 public class BatteryTest {
+
     @Test
     public void whenThis30Another50ThenAnotherLoadEqual80() {
         Battery charger = new Battery(30);

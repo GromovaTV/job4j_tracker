@@ -1,7 +1,9 @@
 package ru.job4j.oop;
+
 import static java.lang.Math.sqrt;
 
 public class Triangle {
+
     private Point first;
     private Point second;
     private Point third;

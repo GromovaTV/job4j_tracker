@@ -1,7 +1,9 @@
 package ru.job4j.stream;
+
 import java.time.LocalDate;
 
 public class Car {
+
     private String brand;
     private String model;
     private LocalDate created;
@@ -20,6 +22,7 @@ public class Car {
     }
 
     static class Builder {
+
         private String brand;
         private String model;
         private LocalDate created;

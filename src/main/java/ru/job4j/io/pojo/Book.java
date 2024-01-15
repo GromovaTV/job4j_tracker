@@ -1,6 +1,7 @@
-package ru.job4j.pojo;
+package ru.job4j.io.pojo;
 
 public class Book {
+
     private String name;
     private int pages;
 

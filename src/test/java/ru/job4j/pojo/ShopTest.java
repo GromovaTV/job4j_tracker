@@ -1,8 +1,14 @@
 package ru.job4j.pojo;
-import static org.junit.Assert.assertThat;
-import static org.hamcrest.Matchers.is;
+
 import org.junit.Test;
+import ru.job4j.io.pojo.Product;
+import ru.job4j.io.pojo.Shop;
+
+import static org.hamcrest.Matchers.is;
+import static org.junit.Assert.assertThat;
+
 public class ShopTest {
+
     @Test
     public void whenLastNull() {
         Product[] products = new Product[5];

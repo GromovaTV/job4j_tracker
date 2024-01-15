@@ -10,6 +10,7 @@ import java.util.function.Supplier;
  * Вернуть Supplier, который создает пустую строку через new.
  */
 public class MRSupplier {
+
     public static Supplier<String> supplier() {
         return String::new;
     }

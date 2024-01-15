@@ -1,9 +1,14 @@
 package ru.job4j.stream;
+
 import org.junit.Test;
+
 import java.util.Arrays;
 import java.util.List;
-import static org.junit.Assert.*;
+
+import static org.junit.Assert.assertEquals;
+
 public class ProfilesTest {
+
     @Test
     public void whenTestMethodCollect() {
         Address first = new Address("City1", "Street1", 1, 1);

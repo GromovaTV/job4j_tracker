@@ -2,7 +2,8 @@ package ru.job4j.lambda;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 public class PredicateCheckPositiveTest {
 
@@ -12,5 +13,4 @@ public class PredicateCheckPositiveTest {
         assertFalse(PredicateCheckPositive.check(-1));
         assertFalse(PredicateCheckPositive.check(0));
     }
-
 }

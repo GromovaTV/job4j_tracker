@@ -4,7 +4,6 @@ import java.util.List;
 
 public final class SingleTracker {
     private static Store tracker = null;
-    /* реализовать singleton */
 
     private SingleTracker() {
     }
@@ -23,7 +22,6 @@ public final class SingleTracker {
     public Item findById(int id) {
         return tracker.findById(id);
     }
-    /* Остальные методы из класса MemTracker. */
 
     public boolean replace(int id, Item item) {
         return tracker.replace(id, item);

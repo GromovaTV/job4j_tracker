@@ -10,6 +10,7 @@ import org.hibernate.query.Query;
 import java.util.List;
 
 public class HbmTracker implements Store, AutoCloseable {
+
     private final StandardServiceRegistry registry = new StandardServiceRegistryBuilder()
             .configure().build();
     private SessionFactory sf;

@@ -1,14 +1,15 @@
 package ru.job4j.tracker;
 
+import javax.persistence.*;
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Objects;
-import javax.persistence.*;
 
 @Entity
 @Table(name = "items")
 public class Item {
+
     private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("dd-MMMM-EEEE-yyyy HH:mm:ss");
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -8,6 +8,7 @@ import java.util.Objects;
 
 @Entity
 public class City {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;

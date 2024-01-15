@@ -1,16 +1,18 @@
 package ru.job4j.tracker;
+
+import org.hamcrest.Matchers;
 import org.junit.Test;
 
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.hamcrest.Matchers;
-
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.nullValue;
 import static org.junit.Assert.assertThat;
+
 public class StartUITest {
+
     @Test
     public void whenCreateItem() {
         Output out = new StubOutput();

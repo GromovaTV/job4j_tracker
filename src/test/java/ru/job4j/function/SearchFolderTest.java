@@ -1,11 +1,15 @@
 package ru.job4j.function;
+
 import org.junit.Test;
+
 import java.util.List;
 import java.util.function.Predicate;
+
 import static org.hamcrest.Matchers.is;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertThat;
 
 public class SearchFolderTest {
+
     @Test
     public void whenFilterSize() {
         List<Folder> list = List.of(

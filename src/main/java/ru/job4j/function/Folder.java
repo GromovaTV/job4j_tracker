@@ -1,7 +1,9 @@
 package ru.job4j.function;
+
 import java.util.Objects;
 
 public class Folder {
+
     private String name;
     private int size;
 

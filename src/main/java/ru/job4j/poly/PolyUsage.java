@@ -1,6 +1,7 @@
 package ru.job4j.poly;
 
 public class PolyUsage {
+
     public static void main(String[] args) {
         Vehicle train = new Train();
         Vehicle airplain = new Airplain();

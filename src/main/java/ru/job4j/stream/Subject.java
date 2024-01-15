@@ -1,6 +1,7 @@
 package ru.job4j.stream;
 
 public class Subject {
+
     private String name;
     private int score;
 

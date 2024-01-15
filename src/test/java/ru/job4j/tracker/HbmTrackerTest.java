@@ -1,12 +1,14 @@
 package ru.job4j.tracker;
 
 import org.junit.Test;
+
 import java.util.ArrayList;
 import java.util.List;
-import static net.bytebuddy.matcher.ElementMatchers.is;
-import static org.junit.Assert.*;
+
+import static org.junit.Assert.assertEquals;
 
 public class HbmTrackerTest {
+
     @Test
     public void findById() {
         HbmTracker hbt = new HbmTracker();

@@ -1,10 +1,12 @@
 package ru.job4j.collection;
+
 import org.junit.Test;
 import java.util.Arrays;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 
 public class ConvertList2ArrayTest {
+
     @Test
     public void when7ElementsThen9() {
         int[][] result = ConvertList2Array.toArray(

@@ -3,6 +3,7 @@ package ru.job4j.stream;
 import java.util.stream.Stream;
 
 public class GenerateCard {
+
     public enum Suit {
         Diamonds, Hearts, Spades, Clubs
     }
@@ -12,6 +13,7 @@ public class GenerateCard {
     }
 
     public class Card {
+
         private Suit suit;
         private Value value;
 

@@ -1,7 +1,9 @@
 package ru.job4j.stream;
+
 import java.util.Objects;
 
 public class Tuple {
+
     private String name;
     private double score;
 

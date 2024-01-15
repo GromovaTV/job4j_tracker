@@ -1,11 +1,13 @@
 package ru.job4j.tracker;
 
 import org.junit.Test;
-import ru.job4j.tracker.City;
+
 import java.util.List;
-import static org.junit.Assert.*;
+
+import static org.junit.Assert.assertEquals;
 
 public class CityStoreTest {
+
     @Test
     public void whenCreate() {
         CityStore cityStore = new CityStore();

@@ -1,7 +1,11 @@
 package ru.job4j.inheritance;
+
 import org.junit.Test;
-import static org.junit.Assert.*;
+
+import static org.junit.Assert.assertEquals;
+
 public class JSONReportTest {
+
     @Test
     public void whenTestGenerateMethod() {
         String ln = System.lineSeparator();

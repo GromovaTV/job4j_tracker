@@ -1,9 +1,14 @@
 package ru.job4j.stream;
+
 import org.junit.Test;
+
 import java.util.Arrays;
 import java.util.List;
-import static org.junit.Assert.*;
+
+import static org.junit.Assert.assertEquals;
+
 public class MatrixToListTest {
+
     @Test
     public void whenInputSquareMatrix() {
         Integer[][] matrix = {

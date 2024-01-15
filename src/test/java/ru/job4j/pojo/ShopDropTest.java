@@ -1,9 +1,15 @@
 package ru.job4j.pojo;
+
 import org.junit.Test;
+import ru.job4j.io.pojo.Product;
+import ru.job4j.io.pojo.ShopDrop;
+
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.nullValue;
 import static org.junit.Assert.assertThat;
+
 public class ShopDropTest {
+
     @Test
     public void whenDropFirst() {
         Product[] products = new Product[2];

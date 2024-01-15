@@ -1,12 +1,8 @@
 package ru.job4j.stream;
-import ru.job4j.collection.StringCompare;
 
-import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
-
-import static java.lang.CharSequence.compare;
 
 public class Profiles {
     public static List<Address> collect(List<Profile> profiles) {

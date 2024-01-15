@@ -1,12 +1,16 @@
 package ru.job4j.map;
+
 import org.junit.Test;
+
 import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
+
 import static org.hamcrest.Matchers.is;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertThat;
 
 public class CollegeTest {
+
     @Test
     public void whenAccountIsOptionalEmpty() {
         Map<Student, Set<Subject>> students = Map.of(

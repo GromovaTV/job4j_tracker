@@ -1,11 +1,16 @@
 package ru.job4j.stream;
+
 import org.junit.Test;
+
 import java.util.Arrays;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import static org.junit.Assert.*;
+
+import static org.junit.Assert.assertEquals;
+
 public class ListToMapTest {
+
     @Test
     public void whenInputListNotHaveDuplicate() {
         List<Student> list = Arrays.asList(

@@ -1,6 +1,7 @@
 package ru.job4j.tracker;
 
 public class CloseAction implements UserAction {
+
     private final Output out;
 
     public CloseAction(Output out) {

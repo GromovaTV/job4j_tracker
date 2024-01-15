@@ -3,6 +3,7 @@ package ru.job4j.tracker;
 import java.util.List;
 
 public interface Store extends AutoCloseable {
+
     void init();
 
     Item add(Item item);
@@ -10,8 +11,6 @@ public interface Store extends AutoCloseable {
     boolean replace(int id, Item item);
 
     boolean delete(int id);
-
-//    List<Item> findAll();
 
     void findAll(Observe<Item> observe);
 

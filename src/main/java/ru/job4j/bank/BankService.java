@@ -1,5 +1,4 @@
 package ru.job4j.bank;
-import ru.job4j.map.Subject;
 
 import java.util.*;
 
@@ -9,6 +8,7 @@ import java.util.*;
  * @version 1.0
  */
 public class BankService {
+
     /**
      * Поле содержит всех пользователей системы с привязанными к ним счетами:
      */
